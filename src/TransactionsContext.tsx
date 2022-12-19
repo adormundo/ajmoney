@@ -39,9 +39,9 @@ export function TransactionProvider({ children }: TranscationProviderProps) {
       ...transactionInput,
       createdAt: new Date(),
     });
-    const { transaction: newTransaction } = response.data;
+    const { transaction } = response.data;
 
-    setTransactions([...transactions, newTransaction]);
+    setTransactions([...transactions, transaction]);
   }
 
   return (
